@@ -1,0 +1,39 @@
+<div class="container">
+    <div>
+      <h1 style="text-align:center">Projects That I've worked on</h1>
+    </div><br>
+    
+    <div style="display:flex;flex-direction:row;justify-content:space-around">
+    <div class=" list" *ngFor="let project of $projects | async">
+      <div style="width:200px;">
+        <img style="height:150px;
+        width:150px;"  src="{{ project.projectIconUrl }}">
+        <div style="text-align:center;">
+          <a >{{ project.projectName }}</a>
+          <div class="description">{{ project.description}}</div>
+        </div>
+        <br>
+        <div>
+          <div style="display: flex;flex-direction: row;justify-content:space-evenly">
+            <button style="background-color: rgb(49, 106, 146);color: white;" (click)="editModal(project)">Edit</button>
+            <div class="or"></div>
+            <button style="background-color: rgb(194, 55, 55);color: white;" (click)="removeProject(project.id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <br><br><br>
+    <button style= "background-color: rgb(17, 165, 17);color: white;margin-left:500px" (click)="showModal()">
+      <i class="add icon"></i>
+      Add a new project
+    </button>
+    <app-modal
+      *ngIf="this.formModalContent.isVisible"
+      (close)="this.formModalContent.isVisible = null"
+      [formModalInputs]="formModalContent"
+      (submit)="addProject($event)"
+      (edit)="editProject($event)"
+    ></app-modal>
+  
+  </div>

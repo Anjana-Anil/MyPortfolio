@@ -1,0 +1,48 @@
+.container{
+    background-color: rgba(192, 192, 142, 0.146);
+    box-shadow:10px 10px 8px 10px #88888877;
+    border-radius: 5px;
+    height:520px;
+    width:80%;
+    margin-top: 20px;
+  
+}
+.content{
+    padding-left:300px;
+}
+ .bar{
+    position:relative;
+    border:2px solid #d6d68b;
+    border-radius:0px;
+    width:600px;
+ }
+
+.bar div{
+    position:relative;
+    width:0;
+    height:20px;
+    border-radius:10px;
+    background-color: rgb(199, 189, 228);
+    
+
+}
+.bar{
+    animation:c-fill 2s forwards;
+}
+@keyframes c-fill{
+    100%{
+        width:70%;
+    }
+}
+
+.skills{
+    margin-top:20px;
+    text-shadow: 1px 1px 1px rgb(207, 220, 92);
+    font-size:15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+h1{
+   text-shadow: 1px 1px 1px rgb(163, 171, 97);
+   font-family:Arial, Helvetica, sans-serif;
+}

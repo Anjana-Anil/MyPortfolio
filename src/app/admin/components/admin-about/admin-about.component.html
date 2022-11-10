@@ -1,0 +1,49 @@
+<div class=" container">
+    <div class="segment" *ngFor="let profile of $profile | async">
+      
+        <div style="text-align: center;">
+          <!-- <div class="image">
+            <img src="{{ profile.downloadUrl }}">
+          </div> -->
+          <div class="content">
+            <h1 id="aboutMe">About Me</h1>
+          </div>
+          <div class="description">
+            {{profile.description}}
+          </div>
+          <div class="Education">
+            <h3>{{profile.degree}}</h3>
+            <h4>{{profile.college}}</h4>
+          </div>
+          <div class="Basic Information">
+            <h4>{{profile.dob}}</h4>
+            <h4>{{profile.email}}</h4>
+          </div>
+          <div class="Certifications">
+            <h4>{{profile.certification}}</h4>
+            
+          </div>
+        </div>
+      
+  
+      <button style= "background-color: rgb(49, 106, 146);color: white;margin-left:550px;"(click)="editModal(profile)">
+        Edit Profile
+      </button>
+  
+      <!-- <div class="ui horizontal divider">
+        <h1 id="aboutMe">About Me</h1>
+      </div> -->
+  
+      <div class="ui segment">
+        <p>{{ profile.aboutMe }}</p>
+      </div>
+  
+    </div>
+  
+    <app-modal
+      *ngIf="this.formModalContent.isVisible"
+      (close)="this.formModalContent.isVisible = null"
+      [formModalInputs]="formModalContent"
+      (edit)="editProfile($event)"
+    ></app-modal>
+  </div>

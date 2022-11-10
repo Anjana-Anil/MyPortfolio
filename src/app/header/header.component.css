@@ -1,0 +1,27 @@
+.head{
+    background-color: rgb(62, 59, 59);
+   
+}
+.main{
+   color: aliceblue !important;
+    height:60px;
+    font-size:17px;
+    
+}
+.nav{
+    
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content:end;
+  
+    
+}
+nav ul li a{
+    color: rgb(186, 185, 131);
+}
+nav ul li a:hover{
+    background-color:rgb(107, 99, 99);
+    border-radius: 10px;
+    size:60%;
+}

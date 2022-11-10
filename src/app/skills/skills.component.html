@@ -1,0 +1,79 @@
+<!-- 
+  <div class="skillgrid">
+<div id="main-skills">
+    <div>
+        <h1>Skills</h1>
+    </div>
+    <div class="top">
+<div class="skills">
+    <div class="skill details">
+        <span>C</span>
+        <span>80%</span>
+    </div>
+    <div class="bar">
+        <div class="C-bar">
+    </div>
+</div>
+<div class="skills">
+    <div class="skill details">
+        <span>Java</span>
+        <span>70%</span>
+    </div>
+    <div class="bar">
+        <div class="Java-bar">
+    </div>
+</div>
+<div class="skills">
+    <div class="skill details">
+        <span>Python</span>
+        <span>65%</span>
+    </div>
+    <div class="bar">
+        <div class="Python-bar">
+    </div>
+</div>
+<div class="skills">
+    <div class="skill details">
+        <span>HTML</span>
+        <span>78%</span>
+    </div>
+    <div class="bar">
+        <div class="HTML-bar">
+    </div>
+</div>
+<div class="skills">
+    <div class="skill details">
+        <span>CSS</span>
+        <span>70%</span>
+    </div>
+    <div class="bar">
+        <div class="CSS-bar">
+    </div>
+</div>
+<div class="skills">
+    <div class="skill details">
+        <span>SQL</span>
+        <span>88%</span>
+    </div>
+    <div class="bar">
+        <div class="SQL-bar">
+    </div>
+</div>
+</div>
+</div>
+</div> -->
+<div class="container">
+  <div class="ui horizontal divider">
+    <h1 id="skills" style="text-align:center ;">Skills</h1>
+  </div>
+  <div class="content">
+    <div class="column" *ngFor="let skill of skills | async">
+      <div class="main">
+        <img class="ui rounded image" src="{{ skill.skillImgUrl }}">
+        <div class="skills">{{ skill.skillName }}</div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </div>
+
+</div>

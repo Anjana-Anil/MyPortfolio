@@ -1,0 +1,23 @@
+
+<div class=" container">
+    <div>
+      <h1 id="projects" style="text-align:center ;text-shadow: 1px 1px 1px rgb(205, 215, 109);font-size: 45px;">Projects</h1>
+    </div>
+  <hr>
+    <div class="pro-grid">
+      <!-- <div class="pro"> -->
+        <div class="item" *ngFor="let project of $projects | async" >
+          <div class="box">
+            <div style="text-align:center;"> <img class="image" src="{{ project.projectIconUrl }}" ></div>
+         
+          <div class="content" style="text-align:center ;">
+            <h1 class="header">{{ project.projectName }}</h1>
+          </div>
+          <div class="des"style="text-align:center ;">
+            <h2>{{project.description}}</h2>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>

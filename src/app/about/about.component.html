@@ -1,0 +1,51 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Playfair+Display&family=Roboto&family=Roboto+Slab&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <div class="container">
+            <div *ngFor="let profile of $profile | async">
+          
+              <div>
+                <div class="card">
+                  <!-- <div class="image">
+                    <img src="{{ profile.downloadUrl }}">
+                  </div> -->
+                  <div class="content">
+                    <div>
+                      <h1 id="aboutMe" style="text-align: center;text-shadow: 1px 1px 1px rgb(163, 171, 97);">About Me</h1>
+                    </div>
+                    <div class="description">
+                      {{profile.description}}
+                    </div>
+                    <br><br>
+                    <div class="Mydetails">
+                      <!-- <div class="info"> -->
+                        <div class="Education">
+                          <h2 class="education" style="text-align:center;">Education</h2>
+                          <h3 style="text-align:center;">{{profile.degree}}</h3>
+                          <h4 style="text-align:center;">{{profile.college}}</h4>
+                        </div>
+                        <div class="Certifications">
+                          <h2 class="cert" style="text-align:center;">Certification</h2>
+                          <h4 style="text-align:center;">{{profile.certification}}</h4>
+                          
+                        </div>
+                      <!-- </div>
+                       -->
+                      <div class="BasicInformation">
+                        <h2 class="basicInfo">Basic Information</h2>
+                        <h4 style="text-align:center;">DOB : {{profile.dob}}</h4>
+                        <h4>Email : {{profile.email}}</h4>
+                      </div>
+                      
+                    </div>
+                    
+                    <!-- <div class="header">{{ profile.firstName }} {{ profile.lastName}}</div>
+                    <div class="meta">
+                      <a>{{ profile.jobTitle }}</a>
+                    </div> -->
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>

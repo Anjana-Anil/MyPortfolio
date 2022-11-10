@@ -1,0 +1,20 @@
+<div style="margin-left:500px;margin-top:40px;width:440px;height:300px;background-color: rgba(171, 167, 146, 0.541);box-shadow:1px 1px 1px;border-radius: 5px;">
+    <form class="ui form" [formGroup]="login" (ngSubmit)="onSubmit()">
+      <div class="field">
+        <br><br><br><br>
+        <label style="margin-left:10px;">
+          Username:
+          <input style="width:300px;border-radius:7px;height:30px;"type="email" formControlName="username">
+        </label>
+      </div>
+  <br>
+      <div class="field">
+        <label style="margin-left:10px;">
+          Password:
+          <input style="width:300px;border-radius:7px;height:30px;"type="email" type="password" formControlName="password">
+        </label>
+      </div>
+      <br>
+      <button style="margin-left: 200px;font:bold;background-color: rgba(172, 173, 98, 0.6);border-radius: 4px;" type="submit">Login</button>
+    </form>
+  </div>
